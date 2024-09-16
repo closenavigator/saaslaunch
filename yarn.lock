@@ -1126,7 +1126,7 @@
   dependencies:
     "@supabase/node-fetch" "^2.6.14"
 
-"@supabase/supabase-js@^2.19.0", "@supabase/supabase-js@^2.33.1", "@supabase/supabase-js@^2.43.3":
+"@supabase/supabase-js@^2.19.0", "@supabase/supabase-js@^2.33.1", "@supabase/supabase-js@^2.45.4":
   version "2.45.4"
   resolved "https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.45.4.tgz"
   integrity sha512-E5p8/zOLaQ3a462MZnmnz03CrduA5ySH9hZyL03Y+QZLIOO4/Gs8Rdy4ZCKDHsN7x0xdanVEWWFN3pJFQr9/hg==

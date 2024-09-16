@@ -17,6 +17,7 @@ async function testConnection() {
     console.log('Connection successful. Current time:', result.rows[0].now);
   } catch (err) {
     console.error('Connection error:', err);
+    console.error('Error details:', err.stack);
   } finally {
     await client.end();
   }

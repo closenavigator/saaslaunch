@@ -1,19 +1,23 @@
 const { Client } = require('pg')
 
 const client = new Client({
-  connectionString: 'postgresql://postgres.rglzklbpjprfwlvrfoip:D4Cq4llSDSIqkrLE@aws-0-us-east-1.pooler.supabase.com:6543/postgres'
+  connectionString: process.env.DATABASE_URL
 })
 
-async function testConnection() {
+async function checkTables() {
   try {
     await client.connect()
-    const result = await client.query('SELECT NOW()')
-    console.log('Connection successful. Current time:', result.rows[0].now)
+    const result = await client.query(`
+      SELECT table_name 
+      FROM information_schema.tables 
+      WHERE table_schema = 'public'
+    `)
+    console.log('Tables in the database:', result.rows.map(row => row.table_name))
   } catch (err) {
-    console.error('Connection error:', err)
+    console.error('Error checking tables:', err)
   } finally {
     await client.end()
   }
 }
 
-testConnection()
+checkTables()
