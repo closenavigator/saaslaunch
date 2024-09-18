@@ -1,12 +1,12 @@
-import ProfileWrapper from '@/components/ProfileWrapper'
 import PageWrapper from '@/components/wrapper/page-wrapper'
+import ProfileWrapper from '@/components/ProfileWrapper'
+import SearchHero from '@/components/SearchHero'
 
 export default function SearchPage() {
   return (
     <PageWrapper>
-      <div className="min-h-screen w-full">
-        <ProfileWrapper />
-      </div>
+      <SearchHero />
+      <ProfileWrapper />
     </PageWrapper>
   )
 }
