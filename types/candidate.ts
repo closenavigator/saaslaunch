@@ -8,27 +8,24 @@ export interface Insight {
 }
 
 export interface CandidateData {
+  id: number;
   name: string;
   currentRole: string;
   location: string;
   avatar: string;
-  insights: Insight[];
+  isVerified: boolean;
+  insights: Array<{ icon: React.ElementType; title: string; value: string }>;
   whyReasons: string[];
   jobMatch?: {
     matchPercentage: number;
-    details: { category: string; percentage: number }[];
+    details: Array<{ category: string; percentage: number }>;
   };
-  jobs: {
+  jobs: Array<{
     company: string;
     role: string;
     period: string;
     logo: string;
-    industries: {
-      name: string;
-      icon: React.ElementType;
-      color: string;
-    }[];
+    industries: Array<{ name: string; icon: React.ElementType; color: string }>;
     description: string;
-  }[];
-  isVerified: boolean; // Add this line
+  }>;
 }

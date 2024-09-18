@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const svgToDataUri = require("mini-svg-data-uri");
 
@@ -149,6 +150,23 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "background-shine": "background-shine 2s linear infinite",
+      },
+      fontFamily: {
+        sans: [
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
       },
     },
   },

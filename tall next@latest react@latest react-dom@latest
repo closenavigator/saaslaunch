@@ -1,0 +1,85 @@
+[33mcommit 387a6a172f7564ec1ca2dfa98950fb1de4de5bfb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Wed Sep 18 04:52:05 2024 +0000
+
+    Changes with errors. But good changes on the landing page and styling.
+
+[33mcommit ea823c0136f3d5ab5199fe23f128d1c312c89ea0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 09:12:12 2024 +0000
+
+    Profile Cards UI completed
+
+[33mcommit 7c371e80421ea01e511ae7d2293f3c722b43667e[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 07:14:04 2024 +0000
+
+    v1-profile
+
+[33mcommit 1d63db92e645a9fe0e7eb51b772aff73f9119586[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 05:27:47 2024 +0000
+
+    Prisma fix
+
+[33mcommit 0bbb249cff30f361a35d8b964ed4522a62b1d027[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 04:43:06 2024 +0000
+
+    !! Trying to fix Prisma error
+    
+    might work
+
+[33mcommit 9f7b86cff6cf5ee25e14070b833dfa52cbe6fa7a[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 03:33:42 2024 +0000
+
+    update
+
+[33mcommit c4f6f63316818f3230e3197053a3766b1d21a66d[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 03:24:04 2024 +0000
+
+    update on errors
+
+[33mcommit 4ece13068c0ccc40b8bd4490b2bbceb9bae4c066[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 03:23:48 2024 +0000
+
+    Updated packages
+
+[33mcommit 4668715bafa445e7581e23433568ea9a3258825c[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 03:18:38 2024 +0000
+
+    fixed issues with stripe
+
+[33mcommit da7033f0c545dbff5cf72ec43ba706e478b28e07[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 03:02:40 2024 +0000
+
+    fixed issue
+
+[33mcommit 9885d0345fdf338627cca0754dec6a35586e0428[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 02:48:33 2024 +0000
+
+    Fixed prisma issue when trying to migrate
+
+[33mcommit 10a43fe839eb4d5fd0da28d27c9a298d17276b94[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 02:26:55 2024 +0000
+
+    Changes in AI instruction and foundational template
+
+[33mcommit da92f289fca3c6788e1523a1154582ddc8aede38[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Mon Sep 16 01:52:04 2024 +0000
+
+    Added better error handling and .ai folder with AI instructions
+
+[33mcommit 55d7a46001d97f874c963d47676d63f710fe6872[m
+Author: closenavigator <157044910+closenavigator@users.noreply.github.com>
+Date:   Sun Sep 15 17:02:10 2024 -0600
+
+    Initial commit
