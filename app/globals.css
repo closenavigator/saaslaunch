@@ -34,7 +34,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 240 5% 10%; /* This corresponds to zinc-900 */
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -73,4 +73,18 @@
 
 ::selection {
   @apply bg-yellow-200;
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-b;
+  }
+  
+  .gradient-text-light {
+    @apply gradient-text from-gray-900 via-gray-700 to-gray-800;
+  }
+  
+  .gradient-text-dark {
+    @apply gradient-text from-white via-gray-300 to-gray-400;
+  }
 }
