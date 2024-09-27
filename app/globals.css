@@ -88,3 +88,9 @@
     @apply gradient-text from-white via-gray-300 to-gray-400;
   }
 }
+
+@layer components {
+  .highlight-text {
+    @apply bg-yellow-200 dark:bg-yellow-900 px-1 py-0.5 rounded;
+  }
+}

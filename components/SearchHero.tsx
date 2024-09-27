@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Testimonials } from "@/components/Testimonials"
 import { useTheme } from 'next-themes'
 import { GradientHeading } from "./ui/gradient-heading";
+import { Highlight } from "@/components/ui/highlight";
 
 const SignUpForm = () => {
   const [email, setEmail] = useState('')
@@ -66,7 +67,7 @@ export default function SearchHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 100 }}
         >
-          Discover top-tier sales talent tailored to your needs.
+          Discover <Highlight>top-tier sales talent</Highlight> tailored to your needs.
           Our AI-powered platform makes hiring easier and more effective.
         </motion.p>
         <SignUpForm />

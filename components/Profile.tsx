@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Share2, ThumbsUp, ThumbsDown, InfoIcon, MapPin, Calendar } from 'lucide-react'
+import { Share2, ThumbsUp, ThumbsDown, InfoIcon, MapPin, Calendar, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
@@ -18,6 +18,9 @@ import { MovingInsightBadges } from '@/components/moving-insight-badges'
 import InteractiveCard from "@/components/ui/interactive-card"
 import { WorkHistory } from '@/components/WorkHistory'
 import { CandidateData } from '@/types/candidate'
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Sparkles } from "lucide-react"
 
 interface ScoreBadgeProps {
   score: number;
@@ -70,6 +73,28 @@ const CheckIcon = () => {
   );
 };
 
+interface AIInsightProps {
+  recommendation: string;
+}
+
+const AIInsight: React.FC<AIInsightProps> = ({ recommendation }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{ duration: 0.3 }}
+    className="bg-card border border-border rounded-lg shadow-md overflow-hidden"
+  >
+    <div className="flex items-center p-3 border-b border-border">
+      <Sparkles className="w-4 h-4 mr-2 text-yellow-500" />
+      <h3 className="text-sm font-semibold">AI Insight</h3>
+    </div>
+    <div className="p-3">
+      <p className="text-sm leading-relaxed text-muted-foreground">{recommendation}</p>
+    </div>
+  </motion.div>
+)
+
 interface ProfileProps {
   data: CandidateData;
   onLike: () => void;
@@ -79,6 +104,17 @@ interface ProfileProps {
 }
 
 const Profile: React.FC<ProfileProps> = ({ data, onLike, onSkip, onSchedule, isBackgroundCard = false }) => {
+  const [aiInsight, setAIInsight] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchInsight = async () => {
+      // Simulating API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setAIInsight("Focus on enhancing public speaking skills to improve pitch effectiveness. Consider joining a local Toastmasters club or enrolling in an online course to practice regularly.");
+    };
+    fetchInsight();
+  }, []);
+
   return (
     <div className={`w-full max-w-2xl mx-auto overflow-hidden ${isBackgroundCard ? 'opacity-60' : 'shadow-[0_20px_70px_-15px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-in-out hover:shadow-[0_30px_100px_-20px_rgba(0,0,0,0.4)]'}`}>
       <CardContent className="p-6">
@@ -135,17 +171,20 @@ const Profile: React.FC<ProfileProps> = ({ data, onLike, onSkip, onSchedule, isB
           <VideoButton />
         </div>
         
-        <section>
-          <h3 className="text-lg font-semibold mb-2">Why This Candidate?</h3>
-          <ul className="space-y-2">
-            {data.whyReasons.map((reason, index) => (
-              <li key={index} className="flex items-start">
-                <CheckIcon />
-                <p className="text-sm ml-2">{reason}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <AnimatePresence>
+          {aiInsight ? (
+            <AIInsight recommendation={aiInsight} />
+          ) : (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex items-center justify-center h-24"
+            >
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            </motion.div>
+          )}
+        </AnimatePresence>
         
         <Separator className="my-6" />
         
